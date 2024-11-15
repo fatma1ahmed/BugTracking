@@ -27,7 +27,7 @@ public class Tester {
     @JsonProperty("tester_bonus")
     private long bonus;
     @ManyToMany
-    private Project projects;
+    private List<Project> projects;
     @OneToMany(mappedBy = "tester",cascade = CascadeType.ALL)
     @JsonIgnore
     private List<Bug> bugs;

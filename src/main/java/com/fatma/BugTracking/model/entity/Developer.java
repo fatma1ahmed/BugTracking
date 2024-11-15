@@ -27,7 +27,8 @@ public class Developer extends Person{
     @JsonProperty("developer_bonus")
     private long bonus;
     @ManyToMany
-    private Project projects;
+    @JsonIgnore
+    private List<Project> projects;
     @OneToMany(mappedBy = "developer",cascade = CascadeType.ALL)
     @JsonIgnore
     private List<Bug> bugs;
